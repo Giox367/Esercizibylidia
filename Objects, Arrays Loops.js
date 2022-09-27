@@ -93,17 +93,18 @@ let bestCar = {
   licensePlate: "cj511aa",
 };
 
-let car2 = Object.assign(bestCar, { licensePlate: "aj218yr" });
+let car2 = Object.assign({ licensePlate: "aj218yr" }, bestCar);
 console.log(car2);
-let car3 = Object.assign(bestCar, { licensePlate: "pj811fe" });
+let car3 = Object.assign({ licensePlate: "pj811fe" }, bestCar);
 console.log(car3);
 
-let car4 = Object.assign(bestCar, { licensePlate: "cf971sp" });
+let car4 = Object.assign({ licensePlate: "cf971sp" }, bestCar);
 console.log(car4);
 
-let car5 = Object.assign(bestCar, { licensePlate: "rm447uw" });
+let car5 = Object.assign({ licensePlate: "rm447uw" }, bestCar),
+  bestCar;
 console.log(car5);
-let car6 = Object.assign(bestCar, { licensePlate: "cd834dn" });
+let car6 = Object.assign({ licensePlate: "cd834dn" }, bestCar);
 console.log(car6);
 
 /* EXERCISE 9
