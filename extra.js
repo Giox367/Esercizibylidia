@@ -31,23 +31,32 @@ console.log(min);
 /* WRITE YOUR ANSWER HERE */
 let mixedArray = [14, "giovanni", 33, 21, "lidia", 17, "miamamma"];
 let onlyNumValue = [];
-for (i = 0; i < mixedArray.length; i++) {
-  if (mixedArray[i] === Number) {
+for (let i = 0; i < mixedArray.length; i++) {
+  if (typeof mixedArray[i] === "number") {
     onlyNumValue.push(mixedArray[i]);
+    console.log(onlyNumValue);
   }
-  console.log(onlyNumValue);
 }
 /* EXTRA 5
  Write a piece of code for deleting only even entries from an array.
 */
 
 /* WRITE YOUR ANSWER HERE */
-
+// ??????
+for (let i = 0; i < mixedArray.length; i++) {
+  if (i % 2 == 0) {
+    mixedArray.splice(i, 1);
+  }
+}
+console.log(mixedArray);
 /* EXTRA 6
  Write a piece of code for removing all the vowels from a string.
 */
 
 /* WRITE YOUR ANSWER HERE */
+//??????
+//let stringa = "giovanni";
+//for(let i = 0 ; i < stringa.length ; i++){
 
 /* EXTRA 7
  Write a piece of code for increasing all the numerical values in a array by 1.

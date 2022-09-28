@@ -44,7 +44,7 @@ delete mySettings.age;
 
 /* WRITE YOUR ANSWER HERE */
 const lidiaSettings = { name: "Lidia", surname: "Kovac", email: "lidiakovac@outlook.it", address: "via dei terremoti", age: "Dont know it" };
-if (mySettings[email] !== lidiaSettings[email]) {
+if (mySettings.email !== lidiaSettings.email) {
   console.log("yes is different");
 }
 /* EXERCISE 6
@@ -92,19 +92,31 @@ let bestCar = {
   model: "testanera",
   licensePlate: "cj511aa",
 };
-
-let car2 = Object.assign({ licensePlate: "aj218yr" }, bestCar);
+console.log(bestCar);
+let car2 = {};
+Object.assign(car2, bestCar);
+car2.licensePlate = "aj555pi";
 console.log(car2);
-let car3 = Object.assign({ licensePlate: "pj811fe" }, bestCar);
+
+let car3 = {};
+Object.assign(car3, bestCar);
+car3.licensePlate = "lf432vv";
 console.log(car3);
 
-let car4 = Object.assign({ licensePlate: "cf971sp" }, bestCar);
+let car4 = {};
+Object.assign(car4, bestCar);
+car4.licensePlate = "or799em";
 console.log(car4);
 
-let car5 = Object.assign({ licensePlate: "rm447uw" }, bestCar),
-  bestCar;
+let car5 = {};
+Object.assign(car5, bestCar);
+car5.licensePlate = "gb121ce";
 console.log(car5);
-let car6 = Object.assign({ licensePlate: "cd834dn" }, bestCar);
+
+let car6 = {};
+Object.assign(car6, bestCar);
+car6.licensePlate = "rm888bp";
+
 console.log(car6);
 
 /* EXERCISE 9
@@ -113,27 +125,52 @@ console.log(car6);
 
 /* WRITE YOUR ANSWER HERE */
 
+let carForRent = [
+  { brand: "ferrari", model: "testanera", licensePlate: "cj511aa" },
+  { brand: "ferrari", model: "testanera", licensePlate: "aj555pi" },
+  { brand: "ferrari", model: "testanera", licensePlate: "lf432vv" },
+  { brand: "ferrari", model: "testanera", licensePlate: "or799em" },
+  { brand: "ferrari", model: "testanera", licensePlate: "gb121ce" },
+  { brand: "ferrari", model: "testanera", licensePlate: "rm888bp" },
+];
 /* EXERCISE 10
  Remove the first and the last car from the carsForRent array.
 */
 
 /* WRITE YOUR ANSWER HERE */
+carForRent.shift();
+carForRent.pop();
+console.log(carForRent);
 
 /* EXERCISE 11
  Print to the console the type of the car variable you created before, as well as the types of its licensePlate and brand properties.
 */
 
 /* WRITE YOUR ANSWER HERE */
-
+console.log(typeof bestCar, typeof bestCar.licensePlate, typeof bestCar.brand);
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
  Create a new variable called totalCars and assign to it the total number of cars present in the carsForSale and carsForRent arrays.
 */
 
 /* WRITE YOUR ANSWER HERE */
+let carForSale = [];
+
+carForSale.push(bestCar, car2, car3);
+console.log(carForSale);
+
+let totalCars = [];
+totalCars.push(...carForSale, ...carForRent);
+console.log(totalCars);
 
 /* EXERCISE 13
+
  Using a loop, print to the console all the data for each car in the carsForSale array.
 */
 
 /* WRITE YOUR ANSWER HERE */
+carForSale.forEach((element) => {
+  for (const key in element) {
+    console.log(`${key} : ${element[key]}`);
+  }
+});
