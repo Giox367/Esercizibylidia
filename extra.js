@@ -42,7 +42,7 @@ for (let i = 0; i < mixedArray.length; i++) {
 */
 
 /* WRITE YOUR ANSWER HERE */
-// ??????
+
 for (let i = 0; i < mixedArray.length; i++) {
   if (i % 2 == 0) {
     mixedArray.splice(i, 1);
@@ -52,7 +52,13 @@ console.log(mixedArray);
 /* EXTRA 6
  Write a piece of code for removing all the vowels from a string.
 */
-
+let string = "giovanni";
+for (i = 0; i < string.length; i++) {
+  let char = string[i];
+  if (char === "a" || char === "u" || char === "o" || char === "i" || char === "e") {
+    string.slice(i, 1);
+  }
+}
 /* WRITE YOUR ANSWER HERE */
 //??????
 //let stringa = "giovanni";
